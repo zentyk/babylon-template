@@ -1,9 +1,24 @@
 export default class Config {
-    public viewStyle : number = 0; // 0 : desktop, 1 : mobile, 2 : WebVR
-    public controlStyle : number = 0; // 0 : mouse & keyboard, 1 : Touch, 2 : Gamepad
+    public viewStyle : Setup.ViewTypes = Setup.ViewTypes.Desktop;
+    public controlStyle : Setup.ControllerTypes = Setup.ControllerTypes.KeyboardAndMouse;
 
-    constructor() {
-        this.viewStyle = 0;
-        this.controlStyle = 0;
+    constructor(view : Setup.ViewTypes, control : Setup.ControllerTypes) {
+        this.viewStyle = view;
+        this.controlStyle = control;
+    }
+}
+
+export namespace Setup {
+    export enum ViewTypes {
+        Desktop = 0,
+        Mobile = 1,
+        WebVR = 2
+    }
+
+    export enum ControllerTypes {
+        KeyboardAndMouse = 0,
+        Touch = 1,
+        GamePad = 2,
+        VRControllers = 3
     }
 }

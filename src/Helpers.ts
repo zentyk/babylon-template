@@ -1,5 +1,5 @@
 export default class Helpers {
-    private debug : boolean = false;
+    private readonly debug : boolean = false;
 
     constructor(debug : boolean) {
         this.debug = debug;

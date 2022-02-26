@@ -1,5 +1,5 @@
 import * as BABYLON from 'babylonjs';
-import Config from "./config";
+import Config, {Setup} from "./config";
 import Helpers from "./Helpers";
 
 export default class MyScene {
@@ -16,7 +16,7 @@ export default class MyScene {
         this._canvas = document.getElementById(canvasElement) as HTMLCanvasElement;
         this._engine = new BABYLON.Engine(this._canvas, true);
         this._helpers = new Helpers(true);
-        this._config = new Config();
+        this._config = new Config(Setup.ViewTypes.Desktop, Setup.ControllerTypes.KeyboardAndMouse);
     }
 
     configureGame () : void {

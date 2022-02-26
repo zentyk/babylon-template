@@ -1,14 +1,23 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es5"
+    "target": "ES5",
+    "module": "es2015",
+    "sourceMap": true,
+    "outDir": "./dist/js",
+    "types": [
+      "babylonjs",
+      "babylonjs-gui",
+      "babylonjs-materials"
+    ]
   },
   "include": [
-    "src/*"
+    "src/**/*"
   ],
-  "typeRoots": [
-    "./node_modules/phaser/types"
-    ],
-    "types": [
-    "Phaser"
-    ]
+  "typeRoots": ["./node_modules/"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.js",
+    "dist"
+  ]
 }

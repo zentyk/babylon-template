@@ -21,8 +21,12 @@
     "url": "https://github.com/zentyk/babylon-template/issues"
   },
   "homepage": "https://github.com/zentyk/babylon-template#readme",
-
   "devDependencies": {
     "esbuild": "^0.14.12"
+  },
+  "dependencies": {
+    "babylonjs": "^5.0.0-beta.12",
+    "babylonjs-gui": "^5.0.0-beta.12",
+    "babylonjs-loaders": "^5.0.0-beta.12"
   }
 }
